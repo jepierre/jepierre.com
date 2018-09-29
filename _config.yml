@@ -21,6 +21,7 @@ url: "http://jeaneliepierre.com" # the base hostname & protocol for your site, e
 twitter_username: jp_primetime
 github_username:  jepierre
 facebook_username: jean.elie.pierre005
+linkedin_username: jean-elie-pierre
 
 # Build settings
 markdown: kramdown
