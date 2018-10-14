@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article>
+
+  <div class="container">
+  
+	<form action="https://formspree.io/info@jeaneliepierre.com"
+	  method="POST">
+    <label for="name">Name</label>
+		<input type="text" id="name" name="name" placeholder="Your name..">
+    <label for="email">Email</label>
+		<input type="email" id="email" placeholder="email adress.." dname="_replyto">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Type your message..." style="height:200px"></textarea>
+		<input type="submit" value="Send">
+	</form> 
+
+  </div>
+    {{ content }}
+</article>
