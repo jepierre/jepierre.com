@@ -1,2 +1,2 @@
-mysite: wwww.jeaneliepierre.com
+wwww.jeaneliepierre.com
 
