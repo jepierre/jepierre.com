@@ -1,10 +1,9 @@
 ---
 layout: page
 title: About
-permalink: /about/
+tagline: 
+permalink: /about.html
 ---
+UNDER CONSTRUCTION
 
-About content goes here.
-
-* A list item
-* Another list item
+[Go to the Home Page]({{ site.url }}{{ site.baseurl }})
