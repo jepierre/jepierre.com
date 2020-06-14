@@ -1,37 +1,40 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Setup
+title:               Jean-Elie Pierre
+tagline:             'Computer Engineer'
+#description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 https:jepierre.com
+baseurl:             ''
+paginate:            5
+permalink:           pretty
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Jean-Elie Pierre
-email: info@jepierre.com
-description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.jepierre.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jp_primetime
+# About/contact
+author:
+  name:              Jean-Elie Pierre
+  url:               https://twitter.com/mdo
+  email:             info@jepierre.com
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
+
+
+# User settings
+user_description: I created this website as a cheatsheet for myself to remember all the tricks and tips I've gained over the years. I decided to make it public so that it can be helpful to others. My interests are in Computer Vision, Machine Learning, Digital Image Processing, Robotics, Embedded Systems, IoT, SDR.
+user_title: Computer Engineer
+email: jepierre@jepierre.com
 github_username:  jepierre
+twitter_username: jp_primetime
 facebook_username: jean.elie.pierre005
 linkedin_username: jean-elie-pierre
 
-header_pages:
-  about.md
-  cv.md
-# Build settings
-sass: 
-    sass_dir: _sass
 include: ['_pages']
-kramdown:
-    input: GFM
-markdown: kramdown
+sass:
+    sass_dir: _sass
+    markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate

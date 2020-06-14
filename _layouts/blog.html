@@ -2,10 +2,28 @@
 layout: default
 ---
 
-<h4>Blog</h4>
-{% for post in site.posts %}
-		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-{% endfor %}
+# UNDER CONSTRUCTION 
 
-<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="page">
+  <h1 class="page-title"> Articles </h1>
+</div>
+
+<div class="posts">
+  {% for post in site.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url | absolute_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+    {% comment %}
+    {{ post.content }}
+    {% endcomment %}
+
+  </div>
+  {% endfor %}
+</div>
+
