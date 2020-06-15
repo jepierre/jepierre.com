@@ -1,0 +1,31 @@
+<div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">{{site.title}}</span>
+        <span class="site-description">{{site.tagline}}</span>
+      </h1>
+      <div class="header-icons">
+      <a aria-label="Send email" href="mailto:{{ site.email}}"><i class="fa fa-envelope fa-lg"></i></a>
+      <a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="icon fa fa-linkedin fa-sm" aria-hidden="true"></i></a>
+      <a aria-label="{{ site.github.owner_name }}'s GitHub" target="_blank" href="{{ site.github.owner_url }}"><i class="icon fa fa-github-alt fa-sm" aria-hidden="true"></i></a>
+      <a aria-label="My Facebook" target="_blank" href="https://facebook.com/{{ site.facebook_username }} "><i class="icon fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }} "><i class="icon fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+      </div>
+      <div class="header-links">
+        <nav>
+      {% assign pages_list = site.pages | sort:"url" %}
+      {% for node in pages_list %}
+      {% if node.title != null %}
+      {% if node.layout == "page" or node.layout == "blog" %}
+      <a class="link{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+        </nav>
+      </div>
+  </div>
+
+  {% if page.name == "index.html" %}
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+  {% endif %}
+</div>
