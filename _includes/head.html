@@ -4,6 +4,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <script src="https://kit.fontawesome.com/3c32c9c4b1.js" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{{ "/public/js/main.js" | prepend: site.baseurl }}"></script>
 
   <title>
     {% if page.title == "Home" %}
@@ -17,6 +19,7 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% endif %}
 
+	<link rel="stylesheet" href="{{ '/public/css/styles.css' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/public/css/poole.css' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/public/css/syntax.css' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | absolute_url }}">
