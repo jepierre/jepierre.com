@@ -32,12 +32,9 @@
     </nav>
 
     <div class="sidebar-item">
-      <a aria-label="Send email" href="mailto:{{ site.email}}"><i class="fa fa-envelope fa-lg"></i></a>
-      <a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="icon fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-      <a aria-label="{{ site.github.owner_name }}'s GitHub" target="_blank" href="{{ site.github.owner_url }}"><i class="icon fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-      <a aria-label="My Facebook" target="_blank" href="https://facebook.com/{{ site.facebook_username }} "><i class="icon fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-      <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }} "><i class="icon fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-    </div>
+      {% include social.html %}
+   </div>
+
     <div class="sidebar-item">
       <p> Based on <a href="https://lanyon.getpoole.com/" target="_blank">Lanyon</a> by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>
       </p>
