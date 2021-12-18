@@ -10,7 +10,7 @@ permalink:           pretty
 # About/contact
 author:
   name:              Jean-Elie Pierre
-  url:               https://twitter.com/mdo
+  url:               https://twitter.com/jp_primetime
   email:             info@jepierre.com
 
 # Gems
@@ -23,9 +23,9 @@ google_analytics_id: #UA-XXXX-Y
 
 
 # User settings
-user_description: I'm a Computer Engineer with a passion for integrating hardware and software with several years of experience leading large technical projects. I'm a lifelong learner and tinkerer. My interests are in Computer Vision, Machine Learning, Digital Image Processing, Robotics, Embedded Systems, IoT, SDR.
+user_description: I'm a Computer Engineer with a passion for integrating hardware and software with several years of experience leading large technical projects. I'm a lifelong learner and tinkerer. My interests are in Reinforcement Learning, Computer Vision, Machine Learning, Image Processing, Robotics, Embedded Systems, IoT, DevOps. 
 user_title: Computer Engineer
-email: jepierre@jepierre.com
+email: emailme@jepierre.com
 github_username:  jepierre
 twitter_username: jp_primetime
 facebook_username: jean.elie.pierre005
