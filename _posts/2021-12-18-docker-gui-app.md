@@ -13,7 +13,7 @@ Next, create a Dockerfile with the basic software dependencies needed to run the
 
 Taking a look at the Dockerfile, the first line specifies the base OS image. Ubuntu is used for this container.
 
-<!-- {% highlight <docker> [linenos] %}
+<!-- {% highlight dockerfile %}
   # Our base OS Image
   FROM ubuntu:latest
 {% endhighlight %} -->
