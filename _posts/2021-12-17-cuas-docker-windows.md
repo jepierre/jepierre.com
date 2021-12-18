@@ -4,7 +4,7 @@ title: Running UAS Sim in Docker on Windows
 ---
 
 <figure>
-  <img src="{{site.url}}/assets/uas_output.png" alt="Run gym-pybullet-drones"/>
+  <img src="{{site.url}}/assets/images/uas_output.png" alt="Run gym-pybullet-drones"/>
   <figcaption>https://github.com/utiasDSL/gym-pybullet-drones</figcaption>
 </figure>
 
