@@ -34,8 +34,9 @@ linkedin_username: jean-elie-pierre
 include: ['_pages']
 sass:
     sass_dir: _sass
-    markdown: kramdown
-    highlighter: rouge
+
+markdown: kramdown
+highlighter: rouge
 
 plugins:
   - jekyll-feed

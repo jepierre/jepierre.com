@@ -8,13 +8,13 @@ title: Running UAS Sim in Docker on Windows
   <figcaption>https://github.com/utiasDSL/gym-pybullet-drones</figcaption>
 </figure>
 
-The purpose of article is to show the steps I took to get the [gym-pybullet-drones](https://github.com/utiasDSL/gym-pybullet-drones) environment to run on Windows using Docker. The environment is not officially supported although the repository README as tips for running on Windows, this can be alternate way to get it running with a lot of the headaches.  
+The purpose of article is to illustrate the steps I took to get the [gym-pybullet-drones](https://github.com/utiasDSL/gym-pybullet-drones) environment to run on Windows using Docker. The environment is not officially supported although the repository README as tips for running on Windows, this can be alternate way to get it running with a lot of the headaches.  
 
 The [gym-pybullet-drones](https://github.com/utiasDSL/gym-pybullet-drones) is a great environment for testing out Reinforcement Learning algorithms on drones.
 
 Running the environment in a docker container has the benefit of creating a workspace that is portable to all platforms.  
 
-First thing first, Install Docker and configure it to use WSL 2 as a backend.  See [Docker website](https://docs.docker.com/desktop/windows/install/) for instructions.
+First, install Docker and configure it to use WSL 2 as a backend.  See [Docker website](https://docs.docker.com/desktop/windows/install/) for instructions.
 
 Clone this [github](https://github.com/jepierre/uas-docker-env.git) repository and the [gym-pybullet-drones](https://github.com/utiasDSL/gym-pybullet-drones) submodule.
 
@@ -22,7 +22,7 @@ Clone this [github](https://github.com/jepierre/uas-docker-env.git) repository a
 git clone https://github.com/jepierre/uas-docker-env.git --recurse-submodules
 ```
 
-Next we create a docker file that contains all the steps needed to create our docker container.
+Next, create a docker file that contains all the steps needed to create our docker container.
 
 To build the container open a PowerShell Window and Run:
 
@@ -36,7 +36,7 @@ To run the container, from the same PowerShell Window run:
 docker run --rm -it uas_docker_env:1.0
 ```
 
-To bypass the the default app, run the command: 
+To bypass the the default app, run the command:  
 
 ```PowerShell
 docker run --rm -it -e DISPLAY=$DISPLAY --entrypoint /bin/bash uas_docker_env:1.0 
