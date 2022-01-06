@@ -13,66 +13,61 @@ Next, create a Dockerfile with the basic software dependencies needed to run the
 
 Taking a look at the Dockerfile, the first line specifies the base OS image. Ubuntu is used for this container.
 
-<!-- {% highlight dockerfile %}
-  # Our base OS Image
-  FROM ubuntu:latest
-{% endhighlight %} -->
-
-```Docker
+{% highlight Docker %}
 # Our base OS Image
 FROM ubuntu:latest
-````
+{% endhighlight %}
 
 The next line installs the X11vnc server. This Virtual Network Server (VNC) allows a user to view and interact with real X displays. With this, the user is able to interact with another computer and see the remote computer screen and use keyboard and mouse to interact with the remote computer.  
 
-```Docker
+{% highlight Docker %}
 # Install x11vnc and dependencies for running xeyes
 RUN apt-get update && \
     apt-get install -y x11vnc xvfb x11-apps
-```
+{% endhighlight %}
 
 It's a good practice to use a password when connecting to the remote desktop. The next line does this and saves it on the container. Any user wanting to connect to the container, will need to know the password.  
 
-```Docker
+{% highlight Docker %}
 # creates temporary password for connecting to the VNC server. 
 RUN mkdir ~/.vnc && \
     x11vnc -storepasswd 1234 ~/.vnc/passwd
-```
+{% endhighlight %}
 
 The line below copies a bash script for running the app to display.  
 
-```Docker
+{% highlight Docker %}
 # A script for loading the GUI app
 COPY entrypoint.sh /entrypoint.sh
-```
+{% endhighlight %}
 
 Below are the contents of the `entrypoint.sh` script. It starts the VNC Server and opens a Bash shell.  
 
-```Bash
+{% highlight Bash %}
 #!/bin/bash
 # x11vnc -forever -usepw -create -geometry 1024x768 -solid darkblue &
 x11vnc -forever -usepw -create -solid black & 
 /bin/bash
-```
+{% endhighlight %}
 
 This last line calls the script automatically when running the container.  
 
-```Docker
+{% highlight Docker %}
 # Starts the app. 
 ENTRYPOINT ["/entrypoint.sh"]
-```
+{% endhighlight %}
 
 To build this docker container run the command:  
 
-```PowerShell
+{% highlight Powershell %}
 docker build -t docker_x11vnc:1.0 .
-```
+{% endhighlight %}
 
 To run the container, use the command:  
 
-```Powershell
+{% highlight Powershell %}
 docker run --rm -it -p 5900:5900 -v ${pwd}:/workspace docker_x11vnc:1.0
-```
+{% endhighlight %}
 
 The option `-p 5900:5900` binds `port 5900` to the `localhost` port `5900`. The option`-v ${pwd}:/workspace` exposes this folder to the container in order to update the `entrypoint.sh` script.
 
@@ -86,9 +81,10 @@ Open VNC Viewer, in the search bar type `localhost:5900`. In the pop-up, enter t
 </figure>
 
 When connected, on the container type:
-```
+
+{% highlight Bash %}
 xeyes
-```
+{% endhighlight %}
 
 Below is a output from VNC Viewer.  
 

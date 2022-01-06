@@ -32,3 +32,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 # gem "jekyll-theme-slate", "~> 0.1.1"
 
 gem "jekyll-paginate"
+gem "rouge"
