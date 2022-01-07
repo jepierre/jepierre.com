@@ -7,7 +7,7 @@ Docker is a great tool for automated software development. Most people use Docke
 
 This post illustrates the steps to configure Docker on windows for running a GUI app.  
 
-First thing first, follow the steps to install [Docker for Windows](https://docs.docker.com/desktop/windows/install/).
+First, follow the steps to install [Docker for Windows](https://docs.docker.com/desktop/windows/install/).
 
 Next, create a Dockerfile with the basic software dependencies needed to run the application.  
 

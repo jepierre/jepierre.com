@@ -18,29 +18,29 @@ First, install Docker and configure it to use WSL 2 as a backend.  See [Docker w
 
 Clone this [github](https://github.com/jepierre/uas-docker-env.git) repository and the [gym-pybullet-drones](https://github.com/utiasDSL/gym-pybullet-drones) submodule.
 
-```
+{% highlight bash %}
 git clone https://github.com/jepierre/uas-docker-env.git --recurse-submodules
-```
+{% endhighlight %}
 
 Next, create a docker file that contains all the steps needed to create our docker container.
 
 To build the container open a PowerShell Window and Run:
 
-```PowerShell
+{% highlight Powershell %}
 docker build -t uas_docker_env:1.0 -f "uas_docker_env.dockerfile" .
-```
+{% endhighlight %}
 
 To run the container, from the same PowerShell Window run:  
 
-```PowerShell
+{% highlight Powershell %}
 docker run --rm -it uas_docker_env:1.0
-```
+{% endhighlight %}
 
 To bypass the the default app, run the command:  
 
-```PowerShell
-docker run --rm -it -e DISPLAY=$DISPLAY --entrypoint /bin/bash uas_docker_env:1.0 
-```
+{% highlight Powershell %}
+docker run --rm -it -e DISPLAY=$DISPLAY --entrypoint /bin/bash uas_docker_env:1.0
+{% endhighlight %}
 
 ## References  
 1. Panerati, J., Zheng, H., Zhou, S., Xu, J., Prorok, A., & Schoellig, A. P. (2021). Learning to Fly---a Gym Environment with PyBullet Physics for Reinforcement Learning of Multi-agent Quadcopter Control. 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 1(1), 1–8. https://doi.org/10.0000/00000
