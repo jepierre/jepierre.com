@@ -31,6 +31,7 @@ github_username:  jepierre
 twitter_username: jp_primetime
 facebook_username: jean.elie.pierre005
 linkedin_username: jean-elie-pierre
+google_scholar: https://scholar.google.com/citations?hl=en&user=l-t-5pgAAAAJ
 
 include: ['_pages']
 sass:
