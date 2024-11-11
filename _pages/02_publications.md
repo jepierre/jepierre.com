@@ -5,7 +5,10 @@ permalink: /publications
 order: 2
 ---
 
-List of Publications
+
+You can also find my articles on my [Google Scholar Profile](https://scholar.google.com/citations?user=l-t-5pgAAAAJ&hl=en).
+
+
 ----------
 
 **Pierre, J.**, (2024, May). Securing The Skies: Safety-Constrained Decentralized Multi-UAV Coordination with Deep Reinforcement Learning. [Doctoral Dissertation, University of New Mexico]. https://digitalrepository.unm.edu/ece_etds/647
