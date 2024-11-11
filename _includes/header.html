@@ -12,7 +12,7 @@
     <div class="header-links">
       <nav>
         <a class="link" href="#about" data-scroll>About Me</a>
-        {% assign pages_list = site.pages | sort:"url" %}
+        {% assign pages_list = site.pages | sort:"name" %}
         {% for node in pages_list %}
         {% if node.title != null %}
         {% if node.layout == "page" or node.layout == "blog" %}
